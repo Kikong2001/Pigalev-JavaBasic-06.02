@@ -8,16 +8,17 @@ public class GameGuess {
         System.out.println("  Гра розпочалась: ");
         Scanner numberPlayer = new Scanner(System.in);
         int randomNumber = ThreadLocalRandom.current().nextInt(0, 10);
-        for (int i = 0; i < 3; i++) {
-            System.out.println(i + " цифра: ");
+        for (int i = 1; i < 4; i++) {
+            System.out.print(i + " цифра: ");
             int number = numberPlayer.nextInt();
             if (number == randomNumber) {
                 System.out.println("    Гравець вгадав!!!");
                 break;
+            } else if(i == 3){
+                System.out.println("Гравець програв!!!");
             } else {
                 System.out.println("Спробуйте ще");
             }
         }
-        System.out.println("    Гра закінчилась!");
     }
 }
