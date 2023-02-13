@@ -5,16 +5,16 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Lottery {
     public static void main(String[] args) {
-         int length = 7;
-         int alikeNumbers = 0;
-         int [] firstTicket = new int [length];
-         int [] secondTicket = new int [length];
+        int length = 7;
+        int alikeNumbers = 0;
+        int[] firstTicket = new int[length];
+        int[] secondTicket = new int[length];
 
         // Заполнение 1-го масива
 
-        for (int i = 0; i < length ; i++) {
+        for (int i = 0; i < length; i++) {
             firstTicket[i] = ThreadLocalRandom.current().nextInt(0, 10);
-            }
+        }
         System.out.println("Білет Організатора лотереї: ");
 
         // Сортировка 1-го масива
@@ -37,7 +37,7 @@ public class Lottery {
 
         System.out.println("Білет гравця: ");
         for (int j = 0; j < length; j++) {
-            secondTicket [j] = ThreadLocalRandom.current().nextInt(0,9);
+            secondTicket[j] = ThreadLocalRandom.current().nextInt(0, 9);
         }
 
         // Сортировка 2-го масива
@@ -65,11 +65,11 @@ public class Lottery {
                 System.out.print(i + "й елемент, ");
             }
         }
-        if (alikeNumbers == 0){
+        if (alikeNumbers == 0) {
             System.out.print("Схожих Чисел немає!!!");
         } else {
             System.out.println();
             System.out.print("Кількість збігів: " + alikeNumbers);
         }
-        }
     }
+}
