@@ -67,6 +67,9 @@ public class Lottery {
         }
         if (alikeNumbers == 0){
             System.out.print("Схожих Чисел немає!!!");
+        } else {
+            System.out.println();
+            System.out.print("Кількість збігів: " + alikeNumbers);
         }
         }
     }
