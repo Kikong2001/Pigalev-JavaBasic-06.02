@@ -13,37 +13,35 @@ public class Matrix {
         int sizeN = sizeMatrix.nextInt();
         int[][] firstMatrix = new int[sizeN][sizeM];
         int[][] secondMatrix = new int[sizeM][sizeN];
+        fillMatrixWithRandomValues(firstMatrix);
+        System.out.println("Матиринська матриця: ");
+        printMatrix(firstMatrix);
+        System.out.println("Транспонована матриця: ");
+        swapRowsAndColumnsInMatrix(firstMatrix, secondMatrix);
+        printMatrix(secondMatrix);
+    }
 
-        // Заповненя матриці
-
-        for (int i = 0; i < firstMatrix.length; i++) {
-            for (int j = 0; j < firstMatrix[i].length; j++) {
-                firstMatrix[i][j] = ThreadLocalRandom.current().nextInt(0, 10);
-            }
-        }
-
-        System.out.println();
-
-        // вивід матриці
-
-        for (int[] row : firstMatrix) {
-            System.out.println(Arrays.toString(row));
-        }
-
-        System.out.println();
-
-        // Переініцалізація
-
-        for (int i = 0; i < sizeM; i++) {
-            for (int j = 0; j < sizeN; j++) {
-                secondMatrix[i][j] = firstMatrix[j][i];
-            }
-        }
-
-        // вивід матриці
-
-        for (int[] row : secondMatrix) {
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
             System.out.println(Arrays.toString(row));
         }
     }
+
+    public static void fillMatrixWithRandomValues(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = ThreadLocalRandom.current().nextInt(0, 10);
+            }
+        }
+    }
+
+    public static void swapRowsAndColumnsInMatrix(int[][] firstMatrix, int[][] secondMatrix) {
+        for (int i = 0; i < secondMatrix.length; i++) {
+            for (int j = 0; j < firstMatrix.length; j++) {
+                secondMatrix[i][j] = firstMatrix[j][i];
+            }
+        }
+    }
 }
+
+
