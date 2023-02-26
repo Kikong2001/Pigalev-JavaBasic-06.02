@@ -6,7 +6,8 @@ public class Burger {
     public String cheese = "cheese";
     public String lettuce = "lettuce";
     public String mayonnaise = "mayonnaise";
-    public Burger(String burgerBun, String meat, String cheese, String lettuce, String mayonnaise){
+
+    public Burger(String burgerBun, String meat, String cheese, String lettuce, String mayonnaise) {
         System.out.println("ClassicBurger:");
         System.out.println("1: " + burgerBun);
         System.out.println("2: " + meat);
@@ -14,7 +15,8 @@ public class Burger {
         System.out.println("4: " + lettuce);
         System.out.println("5: " + mayonnaise);
     }
-    public Burger(String burgerBun, String meat, String cheese, String lettuce){
+
+    public Burger(String burgerBun, String meat, String cheese, String lettuce) {
         System.out.println("");
         System.out.println("DieteticBurger:");
         System.out.println("1: " + burgerBun);
@@ -22,7 +24,8 @@ public class Burger {
         System.out.println("3: " + cheese);
         System.out.println("4: " + lettuce);
     }
-    public Burger (String burgerBun, String meat, String doubleMeat, String cheese, String lettuce, String mayonnaise) {
+
+    public Burger(String burgerBun, String meat, String doubleMeat, String cheese, String lettuce, String mayonnaise) {
         doubleMeat = meat;
         System.out.println("");
         System.out.println("DoubleMeatBurger:");
