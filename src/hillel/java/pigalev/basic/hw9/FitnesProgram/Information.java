@@ -15,16 +15,16 @@ public class Information {
     private int age;
 
     public Information(
-            String name,
-            String dayBirthday,
-            String monthBirthday,
-            int yearBirthday,
-            String phoneNumber,
-            String email,
-            String lastName,
-            int weight,
-            int pressure,
-            String stepsTaken
+        String name,
+        String dayBirthday,
+        String monthBirthday,
+        int yearBirthday,
+        String phoneNumber,
+        String email,
+        String lastName,
+        int weight,
+        int pressure,
+        String stepsTaken
     ){
         this.name = name;
         this.dayBirthday = dayBirthday;
